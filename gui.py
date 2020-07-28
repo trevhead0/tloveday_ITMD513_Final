@@ -17,19 +17,6 @@ import gui_support
 import twitter.twitter_analysis as twitter_analysis
 import files
 
-def vp_start_gui():
-    '''Starting point when module is the main routine.'''
-    global w, root
-    global prog_location
-    prog_call = sys.argv[0]
-    prog_location = os.path.split(prog_call)[0]
-    root = tk.Tk()
-    gui_support.set_Tk_var()
-    top = main (root)
-    gui_support.init(root, top)
-    root.mainloop()
-    
-w = None
 def create_main(rt, *args, **kwargs):
     '''Starting point when module is imported by another module.
        Correct form of call: 'create_main(root, *args, **kwargs)' .'''
@@ -435,11 +422,6 @@ class main:
         self.youtube_query.insert(tk.END, "funny")
         self.youtube_count.insert(tk.END,10)
     
-
-if __name__ == '__main__':
-    vp_start_gui()
-
-
 
 
 
